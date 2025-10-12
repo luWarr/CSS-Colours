@@ -1,3 +1,16 @@
+.header{
+    display:flex;
+    justify-content: center;
+}
+
+.h1{
+    font-family: "gelica", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    color: #DCDCDC
+}
+
+
 /* Setup for the Grid Container */
 .grid-container{
     display: grid;
@@ -9,7 +22,10 @@
 .cell1{
     grid-column-start: 2;
     grid-column-end: 4;
-    background-color:red
+    background-color:red;
+    width: 223px;
+    height: 481px;
+   
 }
 
 .cell2{
