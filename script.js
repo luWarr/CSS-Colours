@@ -3,12 +3,13 @@
 // I used the originaly base code shown in the video, then modified it to cater to my API's specific needs
 
 
-const express = require('express');
-const cors = require('cors');
-const fetch = require('node-fetch'); // Make sure to install node-fetch: npm install node-fetch
-const app = express();
+// const express = require("express");
+// const app = express();
+// const cors = require("cors");
+// const fetch = require('node-fetch'); // Make sure to install node-fetch: npm install node-fetch
 
-app.use(cors());
+
+// app.use(cors());
 
 
 fetch("https://csscolorsapi.com/api/colors/red")
