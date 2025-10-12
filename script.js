@@ -3,7 +3,8 @@
 // I used the originaly base code shown in the video, then modified it to cater to my API's specific needs
 
 fetch("https://csscolorsapi.com/api/colors/red")
-.then(response => console.log(response))
+.then(response => response.json())
+.then(data => console.log(data))
 .catch(error => console.error(error));
 
 //This code is from my friend Bre for trouble shooting
