@@ -1,9 +1,9 @@
-.header{
+#header{
     display:flex;
     justify-content: center;
 }
 
-.h1{
+#h1{
     font-family: "gelica", sans-serif;
     font-weight: 600;
     font-style: italic;
@@ -12,14 +12,14 @@
 
 
 /* Setup for the Grid Container */
-.grid-container{
+#grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     
 }
 
-.cell1{
+#cell1{
     grid-column-start: 2;
     grid-column-end: 4;
     background-color:red;
@@ -28,7 +28,7 @@
    
 }
 
-.cell2{
+#cell2{
     grid-column-start: 3;
     grid-column-end: 5;
     background-color:orange;
