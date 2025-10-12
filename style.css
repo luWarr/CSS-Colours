@@ -1,27 +1,41 @@
-#header{
-    display:flex;
-    justify-content: center;
-}
+/* Typeface code */
 
 #h1{
     font-family: "gelica", sans-serif;
     font-weight: 600;
     font-style: italic;
-    color: #DCDCDC
+    color: #DCDCDC;
 }
 
+#p{
+    font-family: "quicksand", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #DCDCDC;
+}
+/* Typeface code */
 
 /* Setup for the Grid Container */
 #grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     
 }
+
+#header{
+    display:flex;
+    justify-content: center;
+    grid-column-start:1;
+    grid-column-end:13;
+    Grid-row: 1;
+}
+
 
 #cell1{
     grid-column-start: 2;
     grid-column-end: 4;
+    grid-row:2;
     background-color:red;
     width: 223px;
     height: 481px;
