@@ -3,6 +3,7 @@
 #h1{
     font-family: "gelica", sans-serif;
     font-weight: 600;
+    font-size:40px;
     font-style: italic;
     color: #7A7A7A;
 }
@@ -12,6 +13,27 @@
     font-weight: 500;
     font-style: normal;
     color: #7A7A7A;
+}
+
+#h3{
+    font-family: "gelica", sans-serif;
+    font-weight: 600;
+    font-size:30px;
+    font-style: italic;
+    color: #7A7A7A;
+    display:flex;
+    justify-content:flex-start;
+    align-items:end;
+}
+
+#numb{
+    font-family: "quicksand", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #7A7A7A;
+    display:flex;
+    justify-content:flex-end;
+    align-items:end;
 }
 /* Typeface code */
 
@@ -51,7 +73,7 @@
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row:2;
-    background-color:orange;
+    background-color: brown;
     width: 230px;
     height: 450px;
 }
@@ -60,7 +82,7 @@
     grid-column-start: 6;
     grid-column-end: 8;
     grid-row:2;
-    background-color: yellow;
+    background-color: orange;
     width: 230px;
     height: 450px;
    
