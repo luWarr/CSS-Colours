@@ -1,7 +1,7 @@
 /* Setup for the Grid Container */
 .grid-container{
     display: grid;
-    grid-template-columns: repeat(12fr, auto);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     
 }
 
