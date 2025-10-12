@@ -5,7 +5,7 @@
 fetch("https://csscolorsapi.com/api/colors/red")
 // .then(response => response.json())
 .then(data => console.log(data))
-.catch(error => console.error(error));
+// .catch(error => console.error(error));
 
 //This code is from my friend Bre for trouble shooting
 // let url = new URL('https://csscolorsapi.com/api/colors');
