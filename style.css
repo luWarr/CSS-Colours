@@ -48,16 +48,17 @@
 }
 
 #cell2{
-    grid-column-start: 3;
-    grid-column-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row:2;
     background-color:orange;
-     width: 230px;
+    width: 230px;
     height: 450px;
 }
 
-/* #cell3{
-    grid-column-start: 5;
-    grid-column-end: 7;
+#cell3{
+    grid-column-start: 6;
+    grid-column-end: 8;
     grid-row:2;
     background-color: yellow;
     width: 230px;
@@ -66,8 +67,8 @@
 }
 
 #cell4{
-    grid-column-start: 7;
-    grid-column-end: 9;
+    grid-column-start: 8;
+    grid-column-end: 10;
     grid-row:2;
     background-color: yellow;
     width: 230px;
@@ -76,11 +77,11 @@
 }
 
 #cell5{
-    grid-column-start: 9;
-    grid-column-end: 11;
+    grid-column-start: 10;
+    grid-column-end: 12;
     grid-row:2;
     background-color: green;
     width: 230px;
     height: 450px;
    
-} */
+}

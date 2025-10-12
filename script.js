@@ -11,7 +11,7 @@ fetch("https://corsproxy.io/?url=https://csscolorsapi.com/api/colors")
 .catch(error => console.error(error));
 
 
-
+//Finish video for fetching data please future lucy//
 
 
 
