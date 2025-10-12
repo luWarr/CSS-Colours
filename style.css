@@ -1,0 +1,12 @@
+/* Setup for the Grid Container */
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(12fr, auto);
+    
+}
+
+.cell1{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color:red
+}
