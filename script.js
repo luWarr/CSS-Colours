@@ -7,7 +7,7 @@
 
 fetch("https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/red")
 .then(response => response.json())
-.then(data => console.log(data))
+.then(data => console.log(data.group))
 .catch(error => console.error(error));
 
 
