@@ -8,6 +8,13 @@ fetch("https://csscolorsapi.com/api/colors/red")
 .catch(error => console.error(error));
 
 
+const express = require('express');
+const cors = require('cors');
+const fetch = require('node-fetch'); // Make sure to install node-fetch: npm install node-fetch
+const app = express();
+
+app.use(cors());
+
 
 
 
