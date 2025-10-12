@@ -2,7 +2,7 @@
 //https://www.youtube.com/watch?v=37vxWr0WgQk
 // I used the originaly base code shown in the video, then modified it to cater to my API's specific needs
 
-fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+fetch("https://csscolorsapi.com/api/colors/red")
 .then(response => console.log(response))
 // .then(data => console.log(data))
 .catch(error => console.error(error));
