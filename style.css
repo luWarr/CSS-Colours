@@ -2,6 +2,7 @@
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     
 }
 
@@ -9,4 +10,10 @@
     grid-column-start: 2;
     grid-column-end: 4;
     background-color:red
+}
+
+.cell2{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-color:orange;
 }
