@@ -20,8 +20,7 @@
 
 //This code is from my friend Bre for trouble shooting
 let url = new URL('https://csscolorsapi.com/api/colors');
-url.searchParams.set('r', searchText);
-url.searchParams.set('limit',10);
+
 
 console.log(url.href);
 
