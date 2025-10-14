@@ -142,6 +142,10 @@
     width: 230px;
     height: 450px;
     border-radius: 25px;
+    display:flex;
+    justify-content:flex-start;
+    align-items:end;
+    padding:20px
    
 }
 

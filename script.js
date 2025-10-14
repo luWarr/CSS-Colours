@@ -11,35 +11,35 @@ fetch("https://corsproxy.io/?url=https://csscolorsapi.com/api/colors")
 .catch(error => console.error(error));
 
 
-//Finish video for fetching data please future lucy//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ///chat GPT code below///
-//This function is for the red button on the main page
-function goToRed() {
-  window.location.href = 'red.html';
-}
+//This function is for the red button on the main page. This was just a reminder so I knew what to do.
+// function goToRed() {
+//   window.location.href = 'red.html';
+// }
 
+// function goToBrown() {
+//   window.location.href = 'brown.html';
+// }
 
+// function goToOrange() {
+//   window.location.href = 'orange.html';
+// }
 
-
-
-
-
-
-//This code is from my friend Bre for trouble shooting
-// let url = new URL('https://csscolorsapi.com/api/colors');
-
-// console.log(url.href);
-
-// //running console log
-// fetch(url.href)
-// .then(response => response.json())
-// .then(response => {
-//     console.log(response);
-//     displayResults(response.data);
-// })
-// .catch(er => console.error(er));
-//This is the end of the code i'm borrowing from my friend Bre
 
 
