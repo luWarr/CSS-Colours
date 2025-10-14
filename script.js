@@ -14,6 +14,14 @@ fetch("https://corsproxy.io/?url=https://csscolorsapi.com/api/colors")
 //Finish video for fetching data please future lucy//
 
 
+///chat GPT code below///
+//This function is for the red button on the main page
+function goToRed() {
+  window.location.href = 'red.html';
+}
+
+
+
 
 
 
