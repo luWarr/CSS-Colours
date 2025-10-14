@@ -21,9 +21,6 @@
     font-size:30px;
     font-style: italic;
     color: #7A7A7A;
-    display:flex;
-    justify-content:flex-start;
-    align-items:end;
     color: white;
 }
 
@@ -69,6 +66,10 @@
     width: 230px;
     height: 450px;
     border-radius: 25px;
+    display:flex;
+    justify-content:flex-start;
+    align-items:end;
+    padding:20px
    
 }
 
@@ -80,6 +81,10 @@
     width: 230px;
     height: 450px;
     border-radius: 25px;
+     display:flex;
+    justify-content:flex-start;
+    align-items:end;
+    padding:20px
 }
 
 #cell3{
@@ -101,6 +106,10 @@
     width: 230px;
     height: 450px;
     border-radius: 25px;
+     display:flex;
+    justify-content:flex-start;
+    align-items:end;
+    padding:20px
    
 }
 
@@ -112,6 +121,10 @@
     width: 230px;
     height: 450px;
     border-radius: 25px;
+     display:flex;
+    justify-content:flex-start;
+    align-items:end;
+    padding:20px
    
 }
 
