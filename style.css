@@ -107,3 +107,52 @@
     height: 450px;
    
 }
+
+#cell6{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row:3;
+    background-color:#00FFFF;
+    width: 230px;
+    height: 450px;
+   
+}
+
+#cell7{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row:3;
+    background-color: blue;
+    width: 230px;
+    height: 450px;
+}
+
+#cell8{
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row:3;
+    background-color: purple;
+    width: 230px;
+    height: 450px;
+   
+}
+
+#cell9{
+    grid-column-start: 8;
+    grid-column-end: 10;
+    grid-row:3;
+    background-color: pink;
+    width: 230px;
+    height: 450px;
+   
+}
+
+#cell10{
+    grid-column-start: 10;
+    grid-column-end: 12;
+    grid-row:3;
+    background-color: #808080;
+    width: 230px;
+    height: 450px;
+   
+}
