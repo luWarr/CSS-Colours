@@ -28,8 +28,8 @@ async function fetchData(){
    
     try{
         
-        const searchBubble = document.getElementById(searchBubble).value.toLowerCase();
-        const response = await fetch(`https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/${searchBubble}`);
+        const search = document.getElementById(search).value.toLowerCase();
+        const response = await fetch(`https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/{search}`);
 
         if(!response.ok){
             throw new Error("could not get data");
