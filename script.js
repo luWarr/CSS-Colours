@@ -25,7 +25,7 @@ async function fetchData(){
         
           if (color && color.name && color.hex && color.rgb) {
         contentArea.innerHTML = `
-      <h2>${color.name}</h2>
+            <h2>${color.name}</h2>
             <p>Hex: ${color.hex}</p>
             <p>RGB: ${color.rgb}</p>
             <div style="width:50px; height:50px; background:${color.hex}; border-radius:8px; border:1px"></div>`;
