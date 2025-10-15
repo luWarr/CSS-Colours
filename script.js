@@ -23,9 +23,6 @@
 
 async function fetchData(){ 
    
-   
-   
-   
     try{
         
         const searchValue = document.getElementById("searchValue").value.toLowerCase();
@@ -36,7 +33,19 @@ async function fetchData(){
         }
 
         const data = await response.json();
-        console.log(data);
+
+        //This code came from Co-Pilot
+        //Prompt: "what code should I place in the html file in order to display my data from this api https://csscolorsapi.com/api/colors/{color name}?"
+        const contentArea = document.getElementById("contentarea");
+        contentArea.innerHTML = `
+      <h2>${data.name}</h2>
+            <p>Hex: ${data.hex}</p>
+            <p>RGB: ${data.rgb}</p>
+            <p>HSL: ${data.hsl}</p>
+            <div style="width:50px; height:50px; background:${data.hex}; border-radius:8px; border:1px solid #ccc;"></div>`;
+        // end of Co-Pilot code
+
+        // console.log(data);
     }
     catch(error){
         console.error(error);
