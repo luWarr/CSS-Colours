@@ -46,9 +46,7 @@ async function fetchData(){
         // end of Co-Pilot code
 
         console.log(data);
-    } else{
-        contentArea.innerHTML = `<p>Whoops! We don't have that one in our library! Try again.</p>`;
-    }
+    } 
     catch(error){
         console.error(error);
 
