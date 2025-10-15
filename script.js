@@ -10,7 +10,7 @@ async function fetchData(){
     try{
         
         const searchValue = document.getElementById("searchValue").value.toLowerCase();
-        const response = await fetch(`https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/group=${searchValue}`);
+        const response = await fetch(`https://corsproxy.io/?url=https://csscolorsapi.com/api/colors?group=${searchValue}`);
 
         if(!response.ok){
             throw new Error("could not get data");
@@ -22,25 +22,13 @@ async function fetchData(){
         //Prompt: "what code should I place in the html file in order to display my data from this api https://csscolorsapi.com/api/colors/{color name}?"
        
         const contentArea = document.getElementById("contentarea");
-            if (Array.isArray(color) && colors.length > 0) {
-            // Build HTML for all colors in the group
-            contentArea.innerHTML = colors.map(color => `
-                <div style="margin-bottom:20px; padding:10px; border:1px solid #eee; border-radius:8px;">
-                    <h3>${color.name}</h3>
-                    <p>Hex: #${color.hex}</p>
-                    <p>RGB: ${color.rgb}</p>
-                    <div style="width:50px; height:50px; background:#${color.hex}; border-radius:8px; border:1px "></div>
-                </div>
-            `).join('');
-
-
-
-    //       if (color && color.name && color.hex && color.rgb) {
-    //     contentArea.innerHTML = `
-    //   <h2>${color.name}</h2>
-    //         <p>Hex: ${color.hex}</p>
-    //         <p>RGB: ${color.rgb}</p>
-    //         <div style="width:50px; height:50px; background:${color.hex}; border-radius:8px; border:1px"></div>`;
+        
+          if (color && color.name && color.hex && color.rgb) {
+        contentArea.innerHTML = `
+      <h2>${color.name}</h2>
+            <p>Hex: ${color.hex}</p>
+            <p>RGB: ${color.rgb}</p>
+            <div style="width:50px; height:50px; background:${color.hex}; border-radius:8px; border:1px"></div>`;
           } else {
         contentArea.innerHTML = '<p>Sorry! Nothing here, try again.</p>';
           }
