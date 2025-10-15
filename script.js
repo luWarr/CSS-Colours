@@ -45,7 +45,9 @@ async function fetchData(){
             <div style="width:50px; height:50px; background:${data.hex}; border-radius:8px; border:1px solid #ccc;"></div>`;
         // end of Co-Pilot code
 
-        // console.log(data);
+        console.log(data);
+    } else{
+        contentArea.innerHTML = `<p>Whoops! We don't have that one in our library! Try again.</p>`;
     }
     catch(error){
         console.error(error);
