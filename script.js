@@ -19,7 +19,7 @@
 // .then(data => console.log(data))
 // .catch(error => console.error(error));
 
-let search = 0;
+
 
 async function fetchData(){ 
    
@@ -28,7 +28,7 @@ async function fetchData(){
    
     try{
         
-        const search = document.getElementById(search).value.toLowerCase();
+        const searchValue = document.getElementById(searchValue).value.toLowerCase();
         const response = await fetch(`https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/${search}`);
 
         if(!response.ok){
