@@ -33,16 +33,20 @@ async function fetchData(){
         }
 
         const data = await response.json();
-
+        const color = data.data; // There is nested data within my API, Co-pilot suggested this line fo code to assit with getting the proper data out.
         //This code came from Co-Pilot
         //Prompt: "what code should I place in the html file in order to display my data from this api https://csscolorsapi.com/api/colors/{color name}?"
         const contentArea = document.getElementById("contentarea");
+          if (color && color.name && color.hex && color.rgb) {
         contentArea.innerHTML = `
       <h2>${data.name}</h2>
             <p>Hex: ${data.hex}</p>
             <p>RGB: ${data.rgb}</p>
             <p>HSL: ${data.hsl}</p>
             <div style="width:50px; height:50px; background:${data.hex}; border-radius:8px; border:1px solid #ccc;"></div>`;
+          } else {
+        contentArea.innerHTML = '<p>Sorry! Nothing here, try again.</p>';
+          }
         // end of Co-Pilot code
 
         console.log(data);
