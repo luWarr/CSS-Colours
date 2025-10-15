@@ -5,7 +5,7 @@
 //A friend gaves me a CORS bypass link so I can avoid messing around with it.
 //The link is: https://corsproxy.io/?url=
 
-fetch("https://corsproxy.io/?url=https://csscolorsapi.com/api/red")
+fetch("https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/red")
 .then(response => {
     if(!response.ok){
         throw new Error("could not get data");
