@@ -5,44 +5,42 @@
 //A friend gaves me a CORS bypass link so I can avoid messing around with it.
 //The link is: https://corsproxy.io/?url=
 
-
-
-//This helped me check to make sure that the fetch request was working, and that it was fetching like it should
-// fetch("https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/red")
-// .then(response => {
-//     if(!response.ok){
-//         throw new Error("could not get data");
-//     }
-//     return response.json();
-// })
-// // .then(response => response.json())
-// .then(data => console.log(data))
-// .catch(error => console.error(error));
-
-
-
 async function fetchData(){ 
    
     try{
         
         const searchValue = document.getElementById("searchValue").value.toLowerCase();
-        const response = await fetch(`https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/${searchValue}`);
+        const response = await fetch(`https://corsproxy.io/?url=https://csscolorsapi.com/api/colors?group=${searchValue}`);
 
         if(!response.ok){
             throw new Error("could not get data");
         }
 
         const data = await response.json();
-        const color = data.data; // There is nested data within my API, Co-pilot suggested this line fo code to assit with getting the proper data out.
+        const color = data.data; // There is nested data within my API, Co-pilot suggested this line of code to assit with getting the proper data out.
         //This code came from Co-Pilot
         //Prompt: "what code should I place in the html file in order to display my data from this api https://csscolorsapi.com/api/colors/{color name}?"
+       
         const contentArea = document.getElementById("contentarea");
-          if (color && color.name && color.hex && color.rgb) {
-        contentArea.innerHTML = `
-      <h2>${color.name}</h2>
-            <p>Hex: ${color.hex}</p>
-            <p>RGB: ${color.rgb}</p>
-            <div style="width:50px; height:50px; background:${color.hex}; border-radius:8px; border:1px solid #ccc;"></div>`;
+            if (Array.isArray(colors) && colors.length > 0) {
+            // Build HTML for all colors in the group
+            contentArea.innerHTML = colors.map(color => `
+                <div style="margin-bottom:20px; padding:10px; border:1px solid #eee; border-radius:8px;">
+                    <h3>${color.name}</h3>
+                    <p>Hex: #${color.hex}</p>
+                    <p>RGB: ${color.rgb}</p>
+                    <div style="width:50px; height:50px; background:#${color.hex}; border-radius:8px; border:1px "></div>
+                </div>
+            `).join('');
+
+
+
+    //       if (color && color.name && color.hex && color.rgb) {
+    //     contentArea.innerHTML = `
+    //   <h2>${color.name}</h2>
+    //         <p>Hex: ${color.hex}</p>
+    //         <p>RGB: ${color.rgb}</p>
+    //         <div style="width:50px; height:50px; background:${color.hex}; border-radius:8px; border:1px"></div>`;
           } else {
         contentArea.innerHTML = '<p>Sorry! Nothing here, try again.</p>';
           }
