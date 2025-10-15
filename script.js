@@ -39,11 +39,10 @@ async function fetchData(){
         const contentArea = document.getElementById("contentarea");
           if (color && color.name && color.hex && color.rgb) {
         contentArea.innerHTML = `
-      <h2>${data.name}</h2>
-            <p>Hex: ${data.hex}</p>
-            <p>RGB: ${data.rgb}</p>
-            <p>HSL: ${data.hsl}</p>
-            <div style="width:50px; height:50px; background:${data.hex}; border-radius:8px; border:1px solid #ccc;"></div>`;
+      <h2>${color.name}</h2>
+            <p>Hex: ${color.hex}</p>
+            <p>RGB: ${color.rgb}</p>
+            <div style="width:50px; height:50px; background:${color.hex}; border-radius:8px; border:1px solid #ccc;"></div>`;
           } else {
         contentArea.innerHTML = '<p>Sorry! Nothing here, try again.</p>';
           }
