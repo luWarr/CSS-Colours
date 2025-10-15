@@ -5,10 +5,15 @@
 //A friend gaves me a CORS bypass link so I can avoid messing around with it.
 //The link is: https://corsproxy.io/?url=
 
-fetch("https://corsproxy.io/?url=https://csscolorsapi.com/api/colors")
-.then(response => console.log(response))
+fetch("https://corsproxy.io/?url=https://csscolorsapi.com/api/red")
+.then(response => {
+    if(!response.ok){
+        throw new Error("could not get data");
+    }
+    return response.json();
+})
 // .then(response => response.json())
-// .then(data => console.log(data))
+.then(data => console.log(data))
 .catch(error => console.error(error));
 
 
