@@ -5,16 +5,43 @@
 //A friend gaves me a CORS bypass link so I can avoid messing around with it.
 //The link is: https://corsproxy.io/?url=
 
-fetch("https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/red")
-.then(response => {
-    if(!response.ok){
-        throw new Error("could not get data");
+
+
+//This helped me check to make sure that the fetch request was working, and that it was fetching like it should
+// fetch("https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/red")
+// .then(response => {
+//     if(!response.ok){
+//         throw new Error("could not get data");
+//     }
+//     return response.json();
+// })
+// // .then(response => response.json())
+// .then(data => console.log(data))
+// .catch(error => console.error(error));
+
+
+
+async function fetchData(){
+   
+   
+   
+   
+    try{
+        
+        const searchBubble = document.getElementById(searchBubble).value.toLowerCase();
+        const response = await fetch(`https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/${searchBubble}`);
+        if(!response.ok){
+            throw new Error("could not get data");
+        }
+
+        const data = await response.json();
+        console.log(data);
     }
-    return response.json();
-})
-// .then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error(error));
+    catch(error){
+        console.error(error);
+
+    }
+}
 
 
  
