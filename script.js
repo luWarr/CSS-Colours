@@ -19,7 +19,7 @@
 // .then(data => console.log(data))
 // .catch(error => console.error(error));
 
-let search
+let search 
 
 async function fetchData(){ 
    
