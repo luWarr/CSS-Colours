@@ -10,7 +10,7 @@ async function fetchData(){
     try{
         
         const searchValue = document.getElementById("searchValue").value.toLowerCase();
-        const response = await fetch(`https://corsproxy.io/?url=https://csscolorsapi.com/api/colors?group=${searchValue}`);
+        const response = await fetch(`https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/group=${searchValue}`);
 
         if(!response.ok){
             throw new Error("could not get data");
@@ -22,7 +22,7 @@ async function fetchData(){
         //Prompt: "what code should I place in the html file in order to display my data from this api https://csscolorsapi.com/api/colors/{color name}?"
        
         const contentArea = document.getElementById("contentarea");
-            if (Array.isArray(colors) && colors.length > 0) {
+            if (Array.isArray(color) && colors.length > 0) {
             // Build HTML for all colors in the group
             contentArea.innerHTML = colors.map(color => `
                 <div style="margin-bottom:20px; padding:10px; border:1px solid #eee; border-radius:8px;">
