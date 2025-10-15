@@ -29,7 +29,7 @@ async function fetchData(){
     try{
         
         const searchValue = document.getElementById("searchValue").value.toLowerCase();
-        const response = await fetch(`https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/${search}`);
+        const response = await fetch(`https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/${searchValue}`);
 
         if(!response.ok){
             throw new Error("could not get data");
