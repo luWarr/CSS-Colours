@@ -10,7 +10,7 @@ async function fetchData(){
     try{
         
         const searchValue = document.getElementById("searchValue").value.toLowerCase();
-        const response = await fetch(`https://corsproxy.io/?url=https://csscolorsapi.com/api/colors/group/${searchValue}`);
+        const response = await fetch(`https://corsproxy.io/?url=https://csscolorsapi.com/api/colors?group=${searchValue}`);
 
         if(!response.ok){
             throw new Error("could not get data");
@@ -23,8 +23,9 @@ async function fetchData(){
        
         const contentArea = document.getElementById("contentarea");
         
-          if (color && color.name && color.hex && color.rgb) {
-        contentArea.innerHTML = `
+          // if (color && color.name && color.hex && color.rgb) 
+          if (Array.isArray(colors) && colors.length > 0){
+        contentArea.innerHTML = colors.map(color =>`
           <div style="
                     margin-bottom:20px;
                     padding:10px;
@@ -37,7 +38,9 @@ async function fetchData(){
           <h2>${color.name}</h2>
             <p>Hex: ${color.hex}</p>
             <p>RGB: ${color.rgb}</p>
-            <div style="width:50px; height:50px; background:${color.hex}; border-radius:8px; border:1px"></div>`;
+            </div>`
+          ).join('');
+
           } else {
         contentArea.innerHTML = '<p>Sorry! Nothing here, try again.</p>';
           }
@@ -47,7 +50,7 @@ async function fetchData(){
     } 
     catch(error){
         console.error(error);
-
+        document.getElementById("contentarea").innerHTML = `<p style="color:red;">${error.message}</p>`;
     }
 }
 
