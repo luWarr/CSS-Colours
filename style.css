@@ -38,6 +38,7 @@
 
 
 /* This is all the things for the header: The title, search bar, and the "search" button */
+/* Its all just basic manipulating and changing. */
 #header{
     display:flex;
     justify-content: center;

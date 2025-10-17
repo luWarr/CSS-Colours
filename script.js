@@ -1,5 +1,6 @@
 
-
+// This was the original code that I had used for most of my ProcessingInstruction. After having constant trial and error. I asked co-pilot to fix the website using a screenshot and my code.
+//Prompt: "can you tell me how to fix this?, I want to target specifically a group of colors, not all of the colours. Also how do I display those colours onto the website?" + Screenshot of code from slide 41 on my process doc
 // async function fetchData(){ 
    
 //     try{
@@ -111,7 +112,7 @@ async function fetchData(){
                 card.style.margin = '8px';
                 card.style.width = 'auto';
                 card.style.boxSizing = 'border-box';
-
+//I altered the div tags so that the text is attached to exsisting style.css tags
                 card.innerHTML = `
                     <h3 id="h3" style="margin:0 0 8px 0;">${color.name}</h3>
                     <p  id="numb" style="margin:0 0 4px 0;">Hex: #${color.hex}</p>
@@ -133,7 +134,7 @@ async function fetchData(){
         document.getElementById("contentarea").innerHTML = `<p style="color:red;">${error.message}</p>`;
     }
 }
-// ...existing code...
+
 
 
 
