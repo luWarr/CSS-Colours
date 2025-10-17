@@ -25,21 +25,23 @@ async function fetchData(){
         
           // if (color && color.name && color.hex && color.rgb) 
           if (Array.isArray(colors) && colors.length > 0){
-        contentArea.innerHTML = colors.map(color =>`
+        contentArea.innerHTML = colors.map(color => {
+           const textColor = color.theme === 'dark' ? '#ffffff' : '#000000';
+                return`
           <div style="
                     margin-bottom:20px;
                     padding:10px;
                     border:1px solid #eee;
                     border-radius:25px;
-                    background:#${colors.hex};
+                    background:#${color.hex};
                     color: #fff;
                     width: 200px;
                 ">  
-          <h2>${colors.name}</h2>
-            <p>Hex: ${colors.hex}</p>
-            <p>RGB: ${colors.rgb}</p>
+          <h2>${color.name}</h2>
+            <p>Hex: ${color.hex}</p>
+            <p>RGB: ${color.rgb}</p>
             </div>`
-          ).join('');
+          }).join('');
 
           } else {
         contentArea.innerHTML = '<p>Sorry! Nothing here, try again.</p>';
@@ -53,6 +55,23 @@ async function fetchData(){
         document.getElementById("contentarea").innerHTML = `<p style="color:red;">${error.message}</p>`;
     }
 }
+
+// const createListings = (group) => {
+
+// group
+// .forEach(group => {
+//   const section = document.createElement('section')
+//   section.classList.add(group.name)
+
+//   group.colors
+//   .forEach(item =>{
+
+//     const id = item.colors.url.split('/').filter(e => Number(e)).pop()
+//   })
+
+// })
+
+// }
 
 
  
