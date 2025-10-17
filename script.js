@@ -1,9 +1,4 @@
-//Used this youtube video made by: Bro Code
-//https://www.youtube.com/watch?v=37vxWr0WgQk
-// I used the originaly base code shown in the video, then modified it to cater to my API's specific needs
 
-//A friend gaves me a CORS bypass link so I can avoid messing around with it.
-//The link is: https://corsproxy.io/?url=
 
 // async function fetchData(){ 
    
@@ -58,6 +53,21 @@
 
 
 
+
+
+
+
+
+//Used this youtube video made by: Bro Code
+//https://www.youtube.com/watch?v=37vxWr0WgQk
+// I used the originaly base code shown in the video, then modified it to cater to my API's specific needs
+//I used the video to start off my code. It gave me a better idea of how the "Fetch" Function Worked
+
+
+//A friend gaves me a CORS bypass link so I can avoid messing around with it.
+//The link is: https://corsproxy.io/?url=
+
+
 //THIS IS COPILOT CODE: 
 //I used the exsisting code above and asked Copilot to fix and improve it. I couldn't get it to work 
 //Prompt: "can you tell me how to fix this?, I want to target specifically a group of colors, not all of the colours. Also how do I display those colours onto the website?"
@@ -66,7 +76,12 @@
 async function fetchData(){ 
     try{
         const searchValue = document.getElementById("searchValue").value.toLowerCase().trim();
+        
+        //A friend gaves me a CORS bypass link so I can avoid messing around with it.
+      //The link is: https://corsproxy.io/?url= you put this link in front of your API link in order to bypass it. In this case there was no need to put it infront of it.
         const target = `https://csscolorsapi.com/api/colors?group=${encodeURIComponent(searchValue)}`;
+      
+
         const response = await fetch(`https://corsproxy.io/?url=${encodeURIComponent(target)}`);
 
         if(!response.ok){

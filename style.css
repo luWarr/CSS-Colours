@@ -37,7 +37,7 @@
 /* Typeface code */
 
 
-
+/* This is all the things for the header: The title, search bar, and the "search" button */
 #header{
     display:flex;
     justify-content: center;
@@ -51,36 +51,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* #contentarea{
-    width: 230px;
-    height: 450px;
-    border-radius: 25px;
-
-} */
 
 #searchValue{
     width: 500px;
@@ -107,158 +77,10 @@
 
 }
 
+/* I asked Co-Pilot on how to hover on an object. I didn't copy the code I just wrote it myself */
+
 #butt:hover{
     background-color: #4169e1;
     color:white;
 }
 
-
-/* 
-#cell1{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row:2;
-    background-color:red;
-    width: 230px;
-    height: 450px;
-    border-radius: 25px;
-    display:flex;
-    justify-content:flex-start;
-    align-items:end;
-    padding:20px
-   
-}
-
-#cell2{
-    grid-column-start: 4;
-    grid-column-end: 6;
-    grid-row:2;
-    background-color: brown;
-    width: 230px;
-    height: 450px;
-    border-radius: 25px;
-     display:flex;
-    justify-content:flex-start;
-    align-items:end;
-    padding:20px
-}
-
-#cell3{
-    grid-column-start: 6;
-    grid-column-end: 8;
-    grid-row:2;
-    background-color: orange;
-    width: 230px;
-    height: 450px;
-    border-radius: 25px;
-     display:flex;
-    justify-content:flex-start;
-    align-items:end;
-    padding:20px
-    
-   
-}
-
-#cell4{
-    grid-column-start: 8;
-    grid-column-end: 10;
-    grid-row:2;
-    background-color: yellow;
-    width: 230px;
-    height: 450px;
-    border-radius: 25px;
-     display:flex;
-    justify-content:flex-start;
-    align-items:end;
-    padding:20px
-   
-}
-
-#cell5{
-    grid-column-start: 10;
-    grid-column-end: 12;
-    grid-row:2;
-    background-color: green;
-    width: 230px;
-    height: 450px;
-    border-radius: 25px;
-     display:flex;
-    justify-content:flex-start;
-    align-items:end;
-    padding:20px
-   
-}
-
-#cell6{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row:3;
-    background-color:#00FFFF;
-    width: 230px;
-    height: 450px;
-    border-radius: 25px;
-    display:flex;
-    justify-content:flex-start;
-    align-items:end;
-    padding:20px
-   
-}
-
-#cell7{
-    grid-column-start: 4;
-    grid-column-end: 6;
-    grid-row:3;
-    background-color: blue;
-    width: 230px;
-    height: 450px;
-    border-radius: 25px;
-     display:flex;
-    justify-content:flex-start;
-    align-items:end;
-    padding:20px
-}
-
-#cell8{
-    grid-column-start: 6;
-    grid-column-end: 8;
-    grid-row:3;
-    background-color: purple;
-    width: 230px;
-    height: 450px;
-    border-radius: 25px;
-     display:flex;
-    justify-content:flex-start;
-    align-items:end;
-    padding:20px
-   
-}
-
-#cell9{
-    grid-column-start: 8;
-    grid-column-end: 10;
-    grid-row:3;
-    background-color: pink;
-    width: 230px;
-    height: 450px;
-    border-radius: 25px;
-     display:flex;
-    justify-content:flex-start;
-    align-items:end;
-    padding:20px
-   
-}
-
-#cell10{
-    grid-column-start: 10;
-    grid-column-end: 12;
-    grid-row:3;
-    background-color: #808080;
-    width: 230px;
-    height: 450px;
-    border-radius: 25px;
-     display:flex;
-    justify-content:flex-start;
-    align-items:end;
-    padding:20px
-   
-} */
