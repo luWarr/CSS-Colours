@@ -88,7 +88,7 @@ async function fetchData(){
             filtered.forEach(color => {
                 const card = document.createElement('div');
                 card.className = 'color-card';
-                const textColor = color.theme === 'dark' ? '#ffffff' : '#000000';
+                const textColor = (color.theme || '').toLowerCase() === 'dark' ? '#ffffff' : '#000000';
                 card.style.background = `#${color.hex}`;
                 card.style.color = textColor;
                 card.style.borderRadius = '12px';
