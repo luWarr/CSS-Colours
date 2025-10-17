@@ -36,15 +36,7 @@
 }
 /* Typeface code */
 
-/* Setup for the Grid Container */
-/* #grid-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(4, auto);
-    column-gap: 20px;
-    row-gap:20px;
-    
-} */
+
 
 #header{
     display:flex;
@@ -90,13 +82,29 @@
 
 } */
 
-/* #searchBubble{
+#searchBubble{
     width: 500px;
     height: 30px;
     border-radius: 25px;
     border-color: none;
+    font-family: "quicksand", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     background-color: #7A7A7A;
-} */
+}
+
+#butt{
+    font-family: "quicksand", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 10px;
+}
+
+a:hover #butt{
+    background-color:#7A7A7A;
+    color:white;
+}
+
 
 /* 
 #cell1{
