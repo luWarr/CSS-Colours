@@ -58,8 +58,10 @@
 
 
 
-
-
+//THIS IS COPILOT CODE: 
+//I used the exsisting code above and asked Copilot to fix and improve it. I couldn't get it to work 
+//Prompt: "can you tell me how to fix this?, I want to target specifically a group of colors, not all of the colours. Also how do I display those colours onto the website?"
+// I added a screenshot of my broken code to give the ai a better idea of how to help me.
 // ...existing code...
 async function fetchData(){ 
     try{
@@ -97,7 +99,7 @@ async function fetchData(){
                 card.style.boxSizing = 'border-box';
 
                 card.innerHTML = `
-                    <h3 style="margin:0 0 8px 0;">${color.name}</h3>
+                    <h3 id="h3" style="margin:0 0 8px 0;">${color.name}</h3>
                     <p style="margin:0 0 4px 0;">Hex: #${color.hex}</p>
                     <p style="margin:0 0 8px 0;">RGB: ${color.rgb}</p>
                     <div style="width:100%; height:36px; border-radius:8px; border:1px solid rgba(0,0,0,0.15)"></div>
