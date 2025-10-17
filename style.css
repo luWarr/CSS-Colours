@@ -37,14 +37,14 @@
 /* Typeface code */
 
 /* Setup for the Grid Container */
-#grid-container{
+/* #grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(4, auto);
     column-gap: 20px;
     row-gap:20px;
     
-}
+} */
 
 #header{
     display:flex;

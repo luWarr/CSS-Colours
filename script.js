@@ -62,64 +62,6 @@
 //I used the exsisting code above and asked Copilot to fix and improve it. I couldn't get it to work 
 //Prompt: "can you tell me how to fix this?, I want to target specifically a group of colors, not all of the colours. Also how do I display those colours onto the website?"
 // I added a screenshot of my broken code to give the ai a better idea of how to help me.
-// ...existing code...
-// async function fetchData(){ 
-//     try{
-//         const searchValue = document.getElementById("searchValue").value.toLowerCase().trim();
-//         // Encode the target URL so the proxy forwards the ?group= param correctly
-//         const target = `https://csscolorsapi.com/api/colors?group=${encodeURIComponent(searchValue)}`;
-//         const response = await fetch(`https://corsproxy.io/?url=${encodeURIComponent(target)}`);
-
-//         if(!response.ok){
-//             throw new Error("could not get data");
-//         }
-
-//         const data = await response.json();
-//         // API may return data.colors or data.data depending on endpoint/version
-//         const colors = data.colors || data.data || [];
-
-//         const contentArea = document.getElementById("contentarea");
-//         contentArea.innerHTML = ''; // clear previous results
-
-//         if (Array.isArray(colors) && colors.length > 0){
-//             // create a wrapper for grid/cards (use CSS instead of inline styles if preferred)
-//             const fragment = document.createDocumentFragment();
-
-//             colors.forEach(color => {
-//                 const card = document.createElement('div');
-//                 card.className = 'color-card';
-//                 // choose readable text color based on provided theme or luminance fallback
-//                 const textColor = color.theme === 'dark' ? '#ffffff' : '#000000';
-//                 card.style.background = `#${color.hex}`;
-//                 card.style.color = textColor;
-//                 card.style.borderRadius = '12px';
-//                 card.style.padding = '12px';
-//                 card.style.margin = '8px';
-//                 card.style.width = 'auto';
-//                 card.style.boxSizing = 'border-box';
-
-//                 card.innerHTML = `
-//                     <h3 id="h3" style="margin:0 0 8px 0;">${color.name}</h3>
-//                     <p id="numb" style="margin:0 0 4px 0;">Hex: #${color.hex}</p>
-//                     <p id= "numb" style="margin:0 0 8px 0;">RGB: ${color.rgb}</p>
-//                 `;
-
-//                 fragment.appendChild(card);
-//             });
-
-//             contentArea.appendChild(fragment);
-//         } else {
-//             contentArea.innerHTML = '<p>Sorry! No colors found for that group. Try a different group name.</p>';
-//         }
-
-//         console.log(data);
-//     } 
-//     catch(error){
-//         console.error(error);
-//         document.getElementById("contentarea").innerHTML = `<p style="color:red;">${error.message}</p>`;
-//     }
-// }
-
 
 async function fetchData(){ 
     try{
@@ -134,6 +76,7 @@ async function fetchData(){
         const data = await response.json();
         const colors = data.colors || data.data || [];
         // filter to only items whose group matches the search (case-insensitive)
+        //This filter allows users to search up a basic colour for example: "RED" and receive all CSS colours that have the Group Tag: "red" in it
         const filtered = colors.filter(c => c.group && c.group.toLowerCase() === searchValue);
 
         const contentArea = document.getElementById("contentarea");
@@ -151,7 +94,7 @@ async function fetchData(){
                 card.style.borderRadius = '12px';
                 card.style.padding = '12px';
                 card.style.margin = '8px';
-                card.style.width = '200px';
+                card.style.width = 'auto';
                 card.style.boxSizing = 'border-box';
 
                 card.innerHTML = `
