@@ -95,13 +95,13 @@ async function fetchData(){
                 card.style.borderRadius = '12px';
                 card.style.padding = '12px';
                 card.style.margin = '8px';
-                card.style.width = '200px';
+                card.style.width = 'auto';
                 card.style.boxSizing = 'border-box';
 
                 card.innerHTML = `
                     <h3 id="h3" style="margin:0 0 8px 0;">${color.name}</h3>
-                    <p style="margin:0 0 4px 0;">Hex: #${color.hex}</p>
-                    <p style="margin:0 0 8px 0;">RGB: ${color.rgb}</p>
+                    <p id="numb" style="margin:0 0 4px 0;">Hex: #${color.hex}</p>
+                    <p id= "numb" style="margin:0 0 8px 0;">RGB: ${color.rgb}</p>
                     <div style="width:100%; height:36px; border-radius:8px; border:1px solid rgba(0,0,0,0.15)"></div>
                 `;
 
