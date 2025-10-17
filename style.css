@@ -100,12 +100,14 @@
     font-weight: 500;
     font-style: normal;
     padding: 10px;
+    border-radius: 25px;
     margin-top:10px;
     background-color: #6495ED;
+    color:white;
 
 }
 
-a:hover #butt{
+#butt:hover{
     background-color: #4169e1;
     color:white;
 }
